@@ -40,7 +40,7 @@ namespace mathSpeed
         private int timeLimit;
         // Record
         private int recordcount = 0;
-
+         
         public mathSpeed()
         {
             InitializeComponent();
