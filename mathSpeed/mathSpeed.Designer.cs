@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mathSpeed));
             this.tbAnswer = new System.Windows.Forms.TextBox();
             this.lblTest = new System.Windows.Forms.Label();
             this.butStart = new System.Windows.Forms.Button();
@@ -136,6 +137,7 @@
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.tbAnswer);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mathSpeed";
             this.Text = "mathSpeed";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mathSpeed_FormClosing);
