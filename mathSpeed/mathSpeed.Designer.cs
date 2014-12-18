@@ -34,44 +34,43 @@
             this.butStart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tiCount = new System.Windows.Forms.Timer(this.components);
+            this.lblInstru = new System.Windows.Forms.Label();
+            this.lblRecord = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbAnswer
             // 
-            this.tbAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbAnswer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbAnswer.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tbAnswer.Location = new System.Drawing.Point(310, 78);
+            this.tbAnswer.Location = new System.Drawing.Point(155, 103);
             this.tbAnswer.Name = "tbAnswer";
-            this.tbAnswer.Size = new System.Drawing.Size(118, 35);
+            this.tbAnswer.Size = new System.Drawing.Size(123, 35);
             this.tbAnswer.TabIndex = 0;
             this.tbAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbAnswer_KeyDown);
             // 
             // lblTest
             // 
-            this.lblTest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTest.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTest.AutoEllipsis = true;
             this.lblTest.AutoSize = true;
-            this.lblTest.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTest.Location = new System.Drawing.Point(81, 77);
+            this.lblTest.Font = new System.Drawing.Font("Verdana Ref", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTest.Location = new System.Drawing.Point(114, 40);
             this.lblTest.Name = "lblTest";
-            this.lblTest.Size = new System.Drawing.Size(193, 29);
+            this.lblTest.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTest.Size = new System.Drawing.Size(194, 31);
             this.lblTest.TabIndex = 1;
-            this.lblTest.Text = "Next Problem";
+            this.lblTest.Text = "Are you ready?";
+            this.lblTest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTest.Click += new System.EventHandler(this.lblTest_Click);
             // 
             // butStart
             // 
-            this.butStart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.butStart.Enabled = false;
+            this.butStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.butStart.Font = new System.Drawing.Font("宋体", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.butStart.Location = new System.Drawing.Point(145, 204);
+            this.butStart.Location = new System.Drawing.Point(89, 179);
             this.butStart.Name = "butStart";
-            this.butStart.Size = new System.Drawing.Size(165, 91);
+            this.butStart.Size = new System.Drawing.Size(126, 62);
             this.butStart.TabIndex = 2;
             this.butStart.Text = "START";
             this.butStart.UseVisualStyleBackColor = true;
@@ -81,25 +80,63 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana Ref", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(388, 236);
+            this.label1.Location = new System.Drawing.Point(274, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 31);
             this.label1.TabIndex = 3;
             this.label1.Text = "SCORE";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // tiCount
+            // 
+            this.tiCount.Interval = 1000;
+            this.tiCount.Tick += new System.EventHandler(this.tiCount_Tick);
+            // 
+            // lblInstru
+            // 
+            this.lblInstru.AutoSize = true;
+            this.lblInstru.Font = new System.Drawing.Font("黑体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblInstru.Location = new System.Drawing.Point(184, 117);
+            this.lblInstru.Name = "lblInstru";
+            this.lblInstru.Size = new System.Drawing.Size(0, 21);
+            this.lblInstru.TabIndex = 4;
+            // 
+            // lblRecord
+            // 
+            this.lblRecord.AutoSize = true;
+            this.lblRecord.Font = new System.Drawing.Font("Verdana Ref", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblRecord.Location = new System.Drawing.Point(287, 247);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(119, 21);
+            this.lblRecord.TabIndex = 5;
+            this.lblRecord.Text = "Your Record";
+            this.lblRecord.Click += new System.EventHandler(this.lblRecord_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(301, 229);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 12);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Your Record";
+            // 
             // mathSpeed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 355);
+            this.ClientSize = new System.Drawing.Size(432, 311);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblRecord);
+            this.Controls.Add(this.lblInstru);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butStart);
             this.Controls.Add(this.lblTest);
             this.Controls.Add(this.tbAnswer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "mathSpeed";
             this.Text = "mathSpeed";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.mathSpeed_FormClosing);
             this.Load += new System.EventHandler(this.mathSpeed_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -113,6 +150,9 @@
         private System.Windows.Forms.Button butStart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer tiCount;
+        private System.Windows.Forms.Label lblInstru;
+        private System.Windows.Forms.Label lblRecord;
+        private System.Windows.Forms.Label label2;
     }
 }
 
