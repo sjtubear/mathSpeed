@@ -49,12 +49,13 @@ namespace mathSpeed
         private void button1_Click(object sender, EventArgs e)
         {
             winCount = 0;
-
+            tbAnswer.Enabled = true;
             count = timeLimit;
             showMath();
             butStart.Enabled = false;
             butStart.Text = count.ToString();
             tiCount.Start();
+            this.BackColor = System.Drawing.Color.LightGray;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -69,6 +70,7 @@ namespace mathSpeed
             upper = 10;
             lower = 1;
             winCount = 0;
+            tbAnswer.Enabled = false;
             if(File.Exists("record.cfg"))
             {
                 using(FileStream fs = new FileStream("record.cfg",FileMode.Open))
@@ -146,15 +148,20 @@ namespace mathSpeed
                 else
                 {
                     tiCount.Stop();
-                    MessageBox.Show("LOOSE!");
+              //      MessageBox.Show("LOOSE!");
                     butStart.Enabled = true;
                     butStart.Text = "START";
+                    upper = 10;
                     if(winCount > recordcount)
                     {
                         recordcount = winCount;
                     }
                     lblRecord.Text = recordcount.ToString();
                     timeLimit = 6;
+                    tbAnswer.Enabled = false;
+                    this.BackColor = System.Drawing.Color.Red;
+                    lblInstru.ForeColor = System.Drawing.Color.Yellow;
+                    lblInstru.Text = "NOT RIGHT!";
                 }
             }
         }
@@ -170,11 +177,16 @@ namespace mathSpeed
                 {
                     recordcount = winCount;
                 }
-                MessageBox.Show("Time is up~~");
+                //MessageBox.Show("Time is up~~");
                 butStart.Enabled = true;
                 butStart.Text = "START";
                 lblRecord.Text = recordcount.ToString();
                 timeLimit = 6;
+                upper = 10;
+                tbAnswer.Enabled = false;
+                this.BackColor = System.Drawing.Color.Red;
+                lblInstru.ForeColor = System.Drawing.Color.Yellow;
+                lblInstru.Text = "TIME IS UP!";
             }
         }
 
