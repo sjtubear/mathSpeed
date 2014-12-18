@@ -1,1 +1,9 @@
 c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\bin\Debug\mathSpeed.exe.config
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\bin\Debug\mathSpeed.exe
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\bin\Debug\mathSpeed.pdb
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.csprojResolveAssemblyReference.cache
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.Properties.Resources.resources
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.csproj.GenerateResource.Cache
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.exe
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.pdb
+c:\users\sjtubear\documents\visual studio 2013\Projects\mathSpeed\mathSpeed\obj\Debug\mathSpeed.mathSpeed.resources
